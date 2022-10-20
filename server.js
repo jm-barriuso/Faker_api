@@ -36,8 +36,8 @@ app.get("/api/company/new", (req, res) => {
     res.json( new Company() );
 });
 
-app.get("/api/user/company/", (req, res) => {
-    res.json( new Company(), new User() );
+app.get("/api/user/company", (req, res) => {
+    res.json( [new Company(), new User()] );
 });
 
 app.listen( port, () => console.log(`Listening on port: ${port}`) );
